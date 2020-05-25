@@ -1,0 +1,135 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* INTRO SECTION */
+section{
+    margin-left: 2em;
+    margin-right: 1.5em;
+}
+
+.home .intro{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    padding-top: 15%;
+    font-weight: bold;
+}
+
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 105px;
+}
+
+.sliding_text{
+    margin-bottom: 50px;
+    color: rgb(91, 155, 213)
+}
+
+.first{
+    animation: slide 5s linear infinite;
+}
+
+.arrow{
+    margin-top: 10%;
+    text-align: center;
+    animation: bounce 0.6s infinite linear;
+}
+
+@keyframes bounce{
+    0%{margin-top: 10%;}
+    25%{margin-top: 10.1%;}
+    50%{margin-top: 10.3%;}
+    75%{margin-top: 10.5%;}
+    100%{margin-top: 10%;}
+
+
+}
+@keyframes slide{
+    0% {margin-top: 0px;}
+    25% {margin-top: 0px;}
+    33% {margin-top: -152px;}
+    58% {margin-top: -152px;}
+    66% {margin-top: -310px;}
+    91% {margin-top: -310px;}
+    100%{margin-top: 0px;}
+}
+/* SIDE BARS */
+.side_social_list {
+    list-style-type: none;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 2em;
+    position: fixed;
+    bottom: 0px;
+}
+
+li{
+    margin-bottom: 1.5em;
+}
+
+a{
+    position: relative;
+    top: 0px;
+    color: black;
+}
+ul a:visited{
+    color: black;
+}
+.v1 {
+    border-left: 2px solid black;
+    height: 6em;
+    width: 2px;
+    margin-left: 0.4em;
+}
+
+.right_bar{
+    position: fixed;
+    flex-direction: column;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 1.5em;
+}
+
+.email_desc{
+    writing-mode: vertical-rl;
+    top: 0px;
+    margin-bottom: 1.5em;
+    position: relative;
+    color:black;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 0s;
+}
+
+
+
+.email:visited{
+    color: black;
+}
+.email_desc:hover{
+    top: -2px;
+    color: rgb(91, 155, 213);
+}
+.icons{
+    color: black;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 0s;
+}
+.icons:hover{
+    top: -2px;
+    color: rgb(91, 155, 213);
+}
