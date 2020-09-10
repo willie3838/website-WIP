@@ -4,13 +4,17 @@
     <title>William Chan</title>
     <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" href="style.css">
+    <!-- MY JAVASCRIPT FILE-->
+    <script src = "scripts.js"></script>
+     <!-- chart.js-->
+     <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <!-- FONT AWESOME-->
     <script src="https://kit.fontawesome.com/cf625f67f9.js" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP STYLESHEET -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="loadSkills()">
     <section class = "home">
         <label class = "intro">William Chan</label>
         <label class = "intro" style = "padding-top: 0px; font-size: 20px;">/ ˈwɪl yəm /</label>
@@ -22,11 +26,128 @@
             </div>
         </label>
 
-        <div class = "arrow">
-            <i class="fas fa-arrow-down fa-lg"></i>
+        <div style = "margin-bottom: 50%;">
+            <i class="arrow fas fa-arrow-down fa-lg"></i>
         </div>
     </section>
+    
+    <section class = "about_me">
+        <div class = "start">
+            <h3 class = "heading">About Me</h3>
+        </div>
 
+        <div class = "desc left"> 
+            <p>Hi! My name is William and
+                I am a computer science student at the University of Western Ontario
+                with an intent to dual degree with the Ivey School of Business. 
+                As a tech enthusiast, I have taken an interest in artificial intelligence
+                and I hope to be able to assist others in leveraging this technology
+                in the future. <br><br>
+                
+                During my free time, you can find me swimming, reading YA novels, or
+                playing a few games of League of Legends with my friends. (As an aside, 
+                gaming has been a large part of my life and I founded an Esports organization
+                to help others pursue their passion for gaming). Moreover, as a lifelong learner,
+                I find myself learning new skills all the time, whether it be as simple as whistling to
+                something as technical as building neural networks.<br><br>
+
+                Additionally, I come from a diverse background being a national athlete and 
+                academic scholar. Keep scrolling to learn more about my experiences and the skills 
+                that I have accumulated!
+            </p>
+        </div>
+
+        <div class = "photo right">
+            <img src ="img/hosa.jpg">
+            <div class = "outline"></div>
+        </div>        
+    </section>
+
+
+    <section class = "skills" >
+        <h3 class = "heading">Skills</h3>
+        <canvas id="bar-chart" width="500" height="350"></canvas>
+    </section>
+
+    <section class = "experience">
+        <h3 class = "heading">Experiences</h3>
+        <div class = "job_box">
+            
+            <ul class = "positions">
+                <li class = "active" onclick="activePosition(this)">
+                    <button>SDCN Lab</button>
+                </li>
+                <li onclick="activePosition(this)">
+                    <button>Frostbite Esports</button>
+                </li>
+                <li onclick="activePosition(this)">
+                    <button>Western AI</button>
+                </li>
+                <li onclick="activePosition(this)">
+                    <button>Town of Richmond Hill</button>
+                </li>
+                <li onclick="activePosition(this)">
+                    <button>Scouts Canada</button>
+                </li>     
+            </ul>
+
+            <div class ="visible job_desc">
+                <h4 class = "title">Autonomous Vehicle Researcher
+                    <a href ="">@ SDCN Lab</a>
+                </h4>
+                <h5 class = "time">May 2020 - August 2020</h5>
+                <ul>
+                    <li>Created a reinforcement learning model based on the cognitive hierarchy theory for self-driving cars using Tensorflow</li>
+                    <li>Designed simulations for AprilTag implementations with turtlebot2 to solve the Perspective-n-Point problem using ROS and Gazebo</li>
+                </ul>
+            </div>
+            <div class ="job_desc">
+                <h4 class = "title">Founder
+                    <a href ="">@ Frostbite Esports</a>
+                </h4>
+                <h5 class = "time">January 2017 - May 2020</h5>
+                <ul>
+                    <li>Organized nationwide gaming tournaments for over 1,200 individuals in partnership with organizations such as Toronto League Commune</li>
+                    <li>Increased finances by over $1000 through effectively communicating with large organizations such as u.gg for sponsorships</li>
+                    <li>Established a philanthropic strategy through integrating free-entry events which led to 357 participants at our flagship event</li>
+                </ul>
+            </div>
+            <div class ="job_desc">
+                <h4 class = "title">Co-VP of Projects
+                    <a href ="">@ Western AI</a>
+                </h4>
+                <h5 class = "time">April 2020 - Present</h5>
+                <ul>
+                    <li>Currently in charge of organizing the structure behind deploying guided projects ranging from classification to reinforcement learning. </li>
+                </ul>
+            </div>
+            <div class ="job_desc">
+                <h4 class = "title">Swim Instructor/Lifeguard
+                    <a href ="">@ Town of Richmond Hill</a>
+                </h4>
+                <h5 class = "time">July 2018 - September 2019</h5>
+                <ul>
+                    <li>Organized and created cohesive 4-month-long lesson plans to support program structures</li>
+                    <li>Achieved a 100% success rate in creating a safe environment for clients through collaborating effectively with the lifeguards</li>
+                    <li>Acquired a 96% pass-rate by professionally communicating with parents to recognize the needs of their children</li>
+                </ul>
+            </div>
+            <div class ="job_desc">
+                <h4 class = "title">Assistant Leader
+                    <a href ="">@ Scouts Canada</a>
+                </h4>
+                <h5 class = "time">September 2015 - June 2017</h5>
+                <ul>
+                    <li>Raised over $1000 through organizing fundraisers that went towards improving the Scouts program</li>
+                    <li>Prepared and presented at events such as camps, Remembrance Day assemblies, and religious services that hosted over 100 participants</li>
+                    <li>Cooperated with supervisors and other assistant leaders to create 2-hour long lesson plans on a weekly basis</li>
+
+                </ul>
+            </div>
+
+        </div>
+        
+    </section>
     <ul class="side_social_list">
         <a  class = "icons" href= "https://www.linkedin.com/in/william-chan-38a430163/"><li><i class="fab fa-linkedin-in fa-lg"></i></li></a>
         <a class = "icons" href = "https://github.com/willie3838"><li><i class="fab fa-github fa-lg"></i></li></a>
@@ -38,6 +159,7 @@
         <a class = "email" href = "mailto: williamchan@rogers.com"><label class = "email_desc">williamchan@rogers.com</label></a>
         <div class = "v1"></div>
     </div>
+
     <!-- BOOTSTRAP JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
