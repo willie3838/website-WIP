@@ -18,51 +18,30 @@ function activePosition(button){
     
 }
 
-function loadSkills(){
-  
-            skills = ['HTML', 'CSS', 'JavaScript', 'Java', 'Python','C++', "C#", 'ROS', 'Tensorflow']
-            points = ['100', '80', '80', '70', '70', '50', '70','50','50']
-            // Bar chart
-            new Chart(document.getElementById("bar-chart"), {
-                type: 'horizontalBar',
-                data: {
-                    labels: skills,
-                    datasets: [
-                        {
-                        backgroundColor: 'rgba(91, 155, 213, 0.6)',
-                        data: points
-                        }
-                    ]
-                },
-                options: {
-                    legend: { display: false },
-                    title: {
-                        display: false,
-                    
-                    },
-                    scales: {
-                        xAxes: [{
-                                    gridLines: {
-                                        display: false,
-                                    },
-                                    ticks: {
-                                        suggestedMin: 0,
-                                        suggestedMax: 100,
-                                    
-                                        }
-                                }],
-                        yAxes: [{
-                            gridLines: {
-                                display: false,
-                            },
-                            ticks: {
-                                fontSize: 15,
-                                fontStyle: 'bold'
-                            }
-                            
-                        }]
-                    }
-                }
-            });
+function skillsMouseIn(list){
+    if(list.id == "python")list.textContent = "Advanced";
     
+    else if(list.id == "java") list.textContent = "Advanced";
+    else if(list.id == "tensorflow") list.textContent = "Intermediate";
+    else if(list.id == "c#") list.textContent = "Intermediate";
+    else if(list.id == "html") list.textContent = "Advanced";
+    else if(list.id == "css") list.textContent = "Advanced";
+    else if(list.id == "javascript")list.textContent = "Intermediate"; 
+    else if(list.id == "react")list.textContent = "Beginner"; 
+
+    if(list.textContent == "Advanced") list.style.color = "red";
+    else if(list.textContent == "Intermediate") list.style.color = "yellow";
+    else list.style.color = "green";
 }
+function skillsMouseOut(list){
+    if(list.id == "python") list.textContent = "Python";
+    else if(list.id == "java") list.textContent = "Java";
+    else if(list.id == "tensorflow") list.textContent = "Tensorflow";
+    else if(list.id == "c#") list.textContent = "C#";
+    else if(list.id == "html") list.textContent = "HTML";
+    else if(list.id == "css") list.textContent = "CSS";
+    else if(list.id == "javascript") list.textContent = "JavaScript"; 
+    else if(list.id == "react")list.textContent = "React.js"; 
+    list.style.color = "white";
+}
+

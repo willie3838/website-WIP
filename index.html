@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body onload="loadSkills()">
+<body>
     <section class = "home">
         <label class = "intro">William Chan</label>
         <label class = "intro" style = "padding-top: 0px; font-size: 20px;">/ ˈwɪl yəm /</label>
@@ -51,26 +51,81 @@
                 I find myself learning new skills all the time, whether it be as simple as whistling to
                 something as technical as building neural networks.<br><br>
 
-                Additionally, I come from a diverse background being a national athlete and 
-                academic scholar. Keep scrolling to learn more about my experiences and the skills 
-                that I have accumulated!
-            </p>
-        </div>
+                Additionally, here is a list of technologies that I've been working with over the years:
+                <ul>
+                    <li id="python" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">Python</li>
+                    <li id="tensorflow" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">Tensorflow</li>
+                    <li id="java" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">Java</li>
+                    <li id="c#" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">C#</li>
+                    <li id="html" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">HTML</li>
+                    <li id="css" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">CSS</li>
+                    <li id="javascript" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">JavaScript</li>
+                    <li id="react" onmouseover="skillsMouseIn(this)" onmouseout="skillsMouseOut(this)">React.js</li>
 
+                </ul>
+            </p>
+                 
+        </div>
         <div class = "photo right">
             <img src ="img/hosa.jpg">
             <div class = "outline"></div>
-        </div>        
-    </section>
-
-
-    <section class = "skills" >
-        <h3 class = "heading">Skills</h3>
-        <canvas id="bar-chart" width="500" height="350"></canvas>
+        </div> 
     </section>
 
     <section class = "experience">
         <h3 class = "heading">Experiences</h3>
+
+        <div class="experience-display">
+            <div class="work-image">
+                <img src="img/wallpaper.png"/>
+            </div>
+            <div class="work-content">
+                <p class="work-place">Frostbite Esports</p>
+                <h4 class="work-title">Founder</h4>
+                <div class="work-description">
+                    Founded an online Esports organization with the goal of providing opportunities for
+                    individuals to pursure their passion for gaming. I've hosted over 17 events, gathered 
+                    over 1200 community members, and raised over $1000 in sponsorships from organizations such as u.gg and guilded.gg.
+                </div>
+                <p class="work-date">January 2017 - May 2020</p> 
+            </div> 
+        </div>
+
+        <div class="experience-display experience-middle">
+            <div class="work-image">
+                <img src="img/wallpaper.png"/>
+            </div>
+            <div class="work-content">
+                <p class="work-place">Frostbite Esports</p>
+                <h4 class="work-title">Founder</h4>
+                <div class="work-description">
+                    Founded an online Esports organization with the goal of providing opportunities for
+                    individuals to pursure their passion for gaming. I've hosted over 17 events, gathered 
+                    over 1200 community members, and raised over $1000 in sponsorships from organizations such as u.gg and guilded.gg.
+                </div>
+                <p class="work-date">January 2017 - May 2020</p> 
+            </div> 
+        </div>
+
+        <div class="experience-display">
+            <div class="work-image">
+                <img src="img/wallpaper.png"/>
+            </div>
+            <div class="work-content">
+                <p class="work-place">Frostbite Esports</p>
+                <h4 class="work-title">Founder</h4>
+                <div class="work-description">
+                    Founded an online Esports organization with the goal of providing opportunities for
+                    individuals to pursure their passion for gaming. I've hosted over 17 events, gathered 
+                    over 1200 community members, and raised over $1000 in sponsorships from organizations such as u.gg and guilded.gg.
+                </div>
+                <p class="work-date">January 2017 - May 2020</p> 
+            </div> 
+        </div>
+        
+    </section>
+
+    <section class = "awards">
         <div class = "job_box">
             
             <ul class = "positions">
@@ -146,7 +201,6 @@
             </div>
 
         </div>
-        
     </section>
     <ul class="side_social_list">
         <a  class = "icons" href= "https://www.linkedin.com/in/william-chan-38a430163/"><li><i class="fab fa-linkedin-in fa-lg"></i></li></a>
